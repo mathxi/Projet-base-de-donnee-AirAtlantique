@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1EAABABA-EE0C-433A-8123-4034FC0AB15E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AirAtlantiqueORM</RootNamespace>
+    <AssemblyName>AirAtlantiqueORM</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AirAtlantique.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirAtlantique.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AirAtlantique.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AirAtlantique.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirAtlantique.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Airport.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Billet.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BilletGP.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="City.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Flight.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Incident.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Luggage.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance_Salaried.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Passenger.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Plane.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Price.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Salaried.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Speciality.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket_Boarding.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Trip.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Type.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypePrice.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="AirAtlantique.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AirAtlantique.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AirAtlantique.edmx.diagram">
+      <DependentUpon>AirAtlantique.edmx</DependentUpon>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AirAtlantique.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AirAtlantique.edmx</DependentUpon>
+      <LastGenOutput>AirAtlantique.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="AirAtlantique.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AirAtlantique.edmx</DependentUpon>
+      <LastGenOutput>AirAtlantique.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

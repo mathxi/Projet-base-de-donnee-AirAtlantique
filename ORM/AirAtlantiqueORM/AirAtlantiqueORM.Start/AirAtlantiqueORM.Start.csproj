@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46DD6721-7CDC-4AD1-9BEF-86E84A108AE3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AirAtlantiqueORM.Start</RootNamespace>
+    <AssemblyName>AirAtlantiqueORM.Start</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AirAtlantique.Context.cs">
+      <DependentUpon>AirAtlantique.Context.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AirAtlantique.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AirAtlantique.Designer.cs">
+      <DependentUpon>AirAtlantique.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Airport.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Billet.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BilletGP.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="City.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Flight.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Incident.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Luggage.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance_Salaried.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Passenger.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Plane.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Price.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Salaried.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Speciality.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket_Boarding.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Trip.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Type.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypePrice.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse.cs">
+      <DependentUpon>AirAtlantique.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="AirAtlantique.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AirAtlantique.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AirAtlantique.edmx.diagram">
+      <DependentUpon>AirAtlantique.edmx</DependentUpon>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AirAtlantique.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AirAtlantique.edmx</DependentUpon>
+      <LastGenOutput>AirAtlantique.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="AirAtlantique.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AirAtlantique.edmx</DependentUpon>
+      <LastGenOutput>AirAtlantique.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
