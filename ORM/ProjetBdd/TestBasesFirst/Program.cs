@@ -64,9 +64,10 @@ namespace ConsoleApp.ExistingDb
                 db.Warehouse.Add(new Warehouse { id = 10, id_Airport=10, Name="Hangar New Yrokais", Available=true });
                 Console.WriteLine(db.Warehouse);
                 Console.ReadKey();
-                db.SaveChanges();
                 Console.WriteLine("Ajout des données dans la base de donnée effectué avec succès ! ");
                 Console.ReadKey();
+
+                db.SaveChanges();
             }
         }
     }
